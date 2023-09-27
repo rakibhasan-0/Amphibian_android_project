@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/item_views">
+
+    <fragment
+        android:id="@+id/item_views"
+        android:name="com.example.amphibian.ItemViews"
+        android:label="fragment_item_views"
+        tools:layout="@layout/fragment_item_views" >
+        <action
+            android:id="@+id/action_item_views_to_items_description"
+            app:destination="@id/items_description" />
+    </fragment>
+    <fragment
+        android:id="@+id/items_description"
+        android:name="com.example.amphibian.ItemsDescription"
+        android:label="fragment_items_description"
+        tools:layout="@layout/fragment_items_description" >
+
+        <action
+            android:id="@+id/item_description_to_item_view"
+            app:destination="@+id/item_views"
+            />
+    </fragment>
+</navigation>
